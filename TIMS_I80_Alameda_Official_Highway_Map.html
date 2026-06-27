@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ae7d6425eff812c5e0fe9daef5f0b56e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ae7d6425eff812c5e0fe9daef5f0b56e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ae7d6425eff812c5e0fe9daef5f0b56e = L.map(
+                "map_ae7d6425eff812c5e0fe9daef5f0b56e",
+                {
+                    center: [37.83, -122.3],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_563284997db26f7f84480ba85f6c5de4 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_563284997db26f7f84480ba85f6c5de4.addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        function geo_json_d0730d174ad94ebbe6895ce937779c96_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "black", "opacity": 0.9, "weight": 6};
+            }
+        }
+
+        function geo_json_d0730d174ad94ebbe6895ce937779c96_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_d0730d174ad94ebbe6895ce937779c96 = L.geoJson(null, {
+                onEachFeature: geo_json_d0730d174ad94ebbe6895ce937779c96_onEachFeature,
+            
+                style: geo_json_d0730d174ad94ebbe6895ce937779c96_styler,
+            ...{
+}
+        });
+
+        function geo_json_d0730d174ad94ebbe6895ce937779c96_add (data) {
+            geo_json_d0730d174ad94ebbe6895ce937779c96
+                .addData(data);
+        }
+            geo_json_d0730d174ad94ebbe6895ce937779c96_add({"bbox": [-122.34971333091092, 37.818859288585486, -122.29330120258327, 37.8979297444213], "features": [{"bbox": [-122.30935998516718, 37.89429039050927, -122.30791271749776, 37.8979041132316], "geometry": {"coordinates": [[-122.30791271749776, 37.89429039050927], [-122.30813764845837, 37.89484589409001], [-122.30882321303879, 37.89653896267132], [-122.30935221204501, 37.89786496323441], [-122.30935998516718, 37.8979041132316]], "type": "LineString"}, "id": "10", "properties": {"AlignCode": "Left", "County": "ALA", "Direction": "WB", "District": 4, "OBJECTID": 11, "PMPrefix": null, "PMRouteID": "ALA080...L", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 534.6941125443334, "bOdometer": 13.1, "bPM": 7.784, "bPMc": "7.784", "eOdometer": 13.352, "ePM": 8.036, "ePMc": "8.036"}, "type": "Feature"}, {"bbox": [-122.30933420980672, 37.881698586945845, -122.30753921147733, 37.89429039050927], "geometry": {"coordinates": [[-122.30825249267755, 37.881698586945845], [-122.30840821024216, 37.88232496242873], [-122.30864121166731, 37.88348296017948], [-122.30876392872163, 37.884036352367595], [-122.30906521109152, 37.88539496111166], [-122.30918402137267, 37.885917732189455], [-122.30923521276746, 37.886142962633066], [-122.30926321055993, 37.88631596128313], [-122.30932920978384, 37.88682596147087], [-122.30933420980672, 37.886974961245436], [-122.30933205923995, 37.88728639130377], [-122.30931781375615, 37.887390072234695], [-122.30929021212073, 37.887590961510185], [-122.30925042394017, 37.887758075900685], [-122.30910021214993, 37.88838896128054], [-122.30900821119012, 37.88866296173554], [-122.30897721212628, 37.88877096180549], [-122.30881821121932, 37.88913496150474], [-122.30875121217048, 37.88925796155138], [-122.3083542098155, 37.89007596164909], [-122.30832105838824, 37.89013946650692], [-122.30822579564563, 37.89032193712475], [-122.3080822134222, 37.89059696188956], [-122.30788410435932, 37.89101959195938], [-122.30781221218714, 37.89117296160751], [-122.30776121213351, 37.89132996207469], [-122.30766821224711, 37.89166496183018], [-122.3076591132116, 37.891713370155585], [-122.30761521164534, 37.89194696235148], [-122.30756621213983, 37.89224396114433], [-122.30753921147733, 37.89261096224405], [-122.30754621204836, 37.89279096183655], [-122.30757421253576, 37.89312196234877], [-122.30759521245216, 37.89328696226457], [-122.30770421223211, 37.89371396148123], [-122.30778621224788, 37.89397796216518], [-122.30791271749776, 37.89429039050927]], "type": "LineString"}, "id": "11", "properties": {"AlignCode": "Left", "County": "ALA", "Direction": "WB", "District": 4, "OBJECTID": 12, "PMPrefix": "R", "PMRouteID": "ALA080.R.L", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 1821.629271543597, "bOdometer": 12.228, "bPM": 6.899, "bPMc": "R6.899", "eOdometer": 13.1, "ePM": 7.771, "ePMc": "R7.771"}, "type": "Feature"}, {"bbox": [-122.34971333091092, 37.819216492693194, -122.31994933561784, 37.82336965460393], "geometry": {"coordinates": [[-122.34971333091092, 37.819216492693194], [-122.34586483055443, 37.81983278901239], [-122.34402894001505, 37.82002697067289], [-122.34304038626568, 37.82020349733462], [-122.341098580761, 37.82050359467099], [-122.33913912246268, 37.820768387053086], [-122.33458470709134, 37.821456846206914], [-122.33310187332319, 37.82163337228732], [-122.33184852587249, 37.82179224738558], [-122.33091293050406, 37.8219158175373], [-122.32909469455493, 37.822074692737175], [-122.325793625736, 37.822321831887976], [-122.32308526623981, 37.82260930124621], [-122.32192461414664, 37.82281326509331], [-122.32083720708846, 37.823032955663145], [-122.3199634562358, 37.823364299375555], [-122.31994933561784, 37.82336965460393]], "type": "LineString"}, "id": "12", "properties": {"AlignCode": "Left", "County": "ALA", "Direction": "WB", "District": 4, "OBJECTID": 13, "PMPrefix": "R", "PMRouteID": "ALA080.R.L", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 3371.6351782662837, "bOdometer": 5.326, "bPM": 0.0, "bPMc": "R0.0", "eOdometer": 6.972, "ePM": 1.646, "ePMc": "R1.646"}, "type": "Feature"}, {"bbox": [-122.31994933561784, 37.82336965460393, -122.29409020277878, 37.881698586945845], "geometry": {"coordinates": [[-122.31994933561784, 37.82336965460393], [-122.31935520605859, 37.823594955598104], [-122.31904420481564, 37.8237029552469], [-122.31871120472972, 37.823811956663825], [-122.31756820543019, 37.82410495491585], [-122.31642220665593, 37.82433495601514], [-122.3148082053816, 37.82464995600276], [-122.31418120556779, 37.824785955876976], [-122.31387726238803, 37.82483882592448], [-122.31358020479496, 37.824899956736715], [-122.31345220474842, 37.82491495631388], [-122.31326520515067, 37.82494495616863], [-122.31307720752466, 37.82496695633822], [-122.31262520491809, 37.82500195578813], [-122.31223356730197, 37.82501794093434], [-122.31223320438262, 37.82501795583525], [-122.31177420479827, 37.82500895638572], [-122.31091850109969, 37.8250216001756], [-122.30954620412892, 37.8249979566628], [-122.30948464348081, 37.824998635719375], [-122.30927420414238, 37.82500095671638], [-122.30776420442174, 37.82512695672907], [-122.30742120518838, 37.82515195547275], [-122.30713920425775, 37.82518195665032], [-122.30691220537534, 37.82521395666298], [-122.30613220450236, 37.82533995631206], [-122.30607741984643, 37.82535200684921], [-122.30605407802209, 37.825357141968304], [-122.30564120513098, 37.82544795766458], [-122.30488120434946, 37.825573956914134], [-122.30445431324836, 37.82565145954716], [-122.30425010821797, 37.82568853272045], [-122.30354326165015, 37.82581685678792], [-122.30234230843838, 37.826034887275206], [-122.30109921525666, 37.82630774023057], [-122.3009342028238, 37.826343958060285], [-122.30023656219099, 37.826514021901325], [-122.29940221054835, 37.826717407315854], [-122.29912920355035, 37.82678395754076], [-122.29789185150159, 37.827105800597295], [-122.29719920280684, 37.827285957394835], [-122.29672220278086, 37.827427957288016], [-122.29605010664149, 37.827649625806764], [-122.29558283087844, 37.8278794363449], [-122.295214635698, 37.8281161230105], [-122.29503514601605, 37.82825945168746], [-122.2947929233845, 37.828474373582196], [-122.29466741616291, 37.82860684499447], [-122.29455546002735, 37.828749992497144], [-122.29443458990923, 37.82891459166669], [-122.29436311006378, 37.82904691754473], [-122.29422478837466, 37.82934369949222], [-122.29416269861883, 37.8295079106465], [-122.29414909273552, 37.82954389063391], [-122.29409020277878, 37.829910957874894], [-122.29409020277878, 37.82999136356605], [-122.29409020367709, 37.830417959119416], [-122.29411322390456, 37.83078389317785], [-122.29412351320781, 37.83094745901963], [-122.29416562533004, 37.83132232882458], [-122.29424374103053, 37.83169353001008], [-122.29430369818581, 37.83202906913552], [-122.29441055728044, 37.832483980961904], [-122.29461231170674, 37.83307986016974], [-122.29475275341993, 37.833470620864425], [-122.29477120301924, 37.833521957875604], [-122.29495261240099, 37.83391537820627], [-122.29551220353419, 37.83512895825708], [-122.29585955690173, 37.83577116117171], [-122.29657447303575, 37.83741469812441], [-122.29658262075539, 37.837433430403834], [-122.29671418531696, 37.83783175129262], [-122.29672404342887, 37.837861602588085], [-122.29676133878453, 37.83798686055525], [-122.29676973084592, 37.83801504459722], [-122.29679159494161, 37.83813119165351], [-122.29683078843746, 37.83833938910043], [-122.29686649108011, 37.83852904763979], [-122.29701368812425, 37.8392536185676], [-122.29726220435266, 37.84105595837392], [-122.29732020497727, 37.84135395831152], [-122.29742620438418, 37.84183395895982], [-122.29753020503958, 37.84233995959219], [-122.2975456165366, 37.84241004769445], [-122.2980127144332, 37.844534256163165], [-122.29810720552297, 37.844963959813924], [-122.29823920486913, 37.84555695889886], [-122.29860268209774, 37.84714061397199], [-122.29860745215187, 37.84716139381695], [-122.29883520561911, 37.84811795906132], [-122.29907099721153, 37.849024771787064], [-122.29907384487096, 37.84904065242127], [-122.29919120527126, 37.849694958814254], [-122.29921020553783, 37.84977395903925], [-122.29945420503701, 37.850757960243534], [-122.29994020618211, 37.852590960107214], [-122.30038320587292, 37.85436895968466], [-122.30046320623887, 37.854607960154944], [-122.3013172067317, 37.857652959473945], [-122.3014652059714, 37.858139960706026], [-122.30236120809364, 37.861362960036054], [-122.30281520765507, 37.8630289601236], [-122.3031262079997, 37.86407595997761], [-122.30348620605317, 37.865426961462596], [-122.30362220739394, 37.86589996044737], [-122.30387749781791, 37.86669966108885], [-122.30390193379027, 37.86677620639606], [-122.30390302075176, 37.86677961323022], [-122.30471620808629, 37.86932696128557], [-122.3047409818252, 37.86940637730226], [-122.30502720932923, 37.87032396154615], [-122.30610620995299, 37.87384096034862], [-122.3063492087289, 37.874567960359535], [-122.30666720964453, 37.8755929615224], [-122.30692320973758, 37.87652996111498], [-122.30726521004433, 37.87752996108634], [-122.30732498394335, 37.87775748263113], [-122.30742017931232, 37.87811984708812], [-122.30742021075335, 37.87811996266441], [-122.3075172090411, 37.87845996178792], [-122.30765721057982, 37.87902496126077], [-122.30778821189769, 37.87957696106161], [-122.30786221061922, 37.8799609621208], [-122.30818620958601, 37.88143196138047], [-122.3082015078953, 37.881493499060156], [-122.30825249267755, 37.881698586945845]], "type": "LineString"}, "id": "859", "properties": {"AlignCode": "Left", "County": "ALA", "Direction": "WB", "District": 4, "OBJECTID": 860, "PMPrefix": null, "PMRouteID": "ALA080...L", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 10633.563320895935, "bOdometer": 6.972, "bPM": 1.643, "bPMc": "1.643", "eOdometer": 12.228, "ePM": 6.899, "ePMc": "6.899"}, "type": "Feature"}, {"bbox": [-122.30920459908091, 37.89427884888662, -122.3077275989722, 37.8979297444213], "geometry": {"coordinates": [[-122.3077275989722, 37.89427884888662], [-122.30801000414472, 37.895029314303514], [-122.30888970453951, 37.89725185252182], [-122.30920459908091, 37.8979297444213]], "type": "LineString"}, "id": "4561", "properties": {"AlignCode": "Right", "County": "ALA", "Direction": "EB", "District": 4, "OBJECTID": 4562, "PMPrefix": null, "PMRouteID": "ALA080...R", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 540.7493680278208, "bOdometer": 13.1, "bPM": 7.784, "bPMc": "7.784", "eOdometer": 13.352, "ePM": 8.036, "ePMc": "8.036"}, "type": "Feature"}, {"bbox": [-122.30901506443743, 37.88171097782241, -122.30731465691083, 37.89427884888662], "geometry": {"coordinates": [[-122.30802596361406, 37.88171097782241], [-122.30803121067363, 37.88173496121026], [-122.3081111831918, 37.88212750816165], [-122.30848820342159, 37.883978070416404], [-122.30866647139479, 37.88473140165324], [-122.30878211511457, 37.88522009353083], [-122.30882398918322, 37.88551640125643], [-122.30889908474774, 37.8859212792258], [-122.3089679208513, 37.886469560512005], [-122.30901506443743, 37.886937280806805], [-122.30901135349698, 37.88711586144153], [-122.30900296053728, 37.887255170441506], [-122.30900361271419, 37.88740159437722], [-122.30897678722316, 37.887597126676425], [-122.30891195311418, 37.88806970186493], [-122.30881889214228, 37.888423530778624], [-122.30868554352658, 37.88883818483365], [-122.30853386568579, 37.88918503256455], [-122.30844458123141, 37.88937456667633], [-122.30827240473414, 37.88973388577151], [-122.3081571086624, 37.88997450561813], [-122.30780406356921, 37.89071128708339], [-122.30766317898654, 37.89100530199998], [-122.30756065336486, 37.89125915696911], [-122.30745839544113, 37.89157372505184], [-122.30743557823291, 37.89167972876897], [-122.30733916834166, 37.892127622864976], [-122.30731823220566, 37.892488395985815], [-122.30731465691083, 37.892699118203254], [-122.30732458778631, 37.89290623215117], [-122.30736638010826, 37.89318468548505], [-122.30746274238878, 37.89357370129543], [-122.30754521222346, 37.8938139619376], [-122.30771221352634, 37.894237962278616], [-122.3077275989722, 37.89427884888662]], "type": "LineString"}, "id": "4562", "properties": {"AlignCode": "Right", "County": "ALA", "Direction": "EB", "District": 4, "OBJECTID": 4563, "PMPrefix": "R", "PMRouteID": "ALA080.R.R", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 1815.33848306325, "bOdometer": 12.228, "bPM": 6.899, "bPMc": "R6.899", "eOdometer": 13.1, "ePM": 7.771, "ePMc": "R7.771"}, "type": "Feature"}, {"bbox": [-122.31983522442391, 37.822776080489255, -122.29330120258327, 37.88171097782241], "geometry": {"coordinates": [[-122.31983522442391, 37.822776080489255], [-122.31949107804195, 37.8228360315447], [-122.3179393794241, 37.823110877491786], [-122.31363848749056, 37.82387267819001], [-122.31065316571421, 37.824401470071564], [-122.30967886912671, 37.824574030406374], [-122.30957379228963, 37.824581366672106], [-122.30734733851918, 37.824736785492505], [-122.3062089430855, 37.82488993762202], [-122.3058726309111, 37.8249551235757], [-122.30537439381351, 37.82505169435951], [-122.30512482386128, 37.825100068399934], [-122.30421170074801, 37.82529186270712], [-122.30407823984288, 37.8253251505325], [-122.30349280597558, 37.8254711689091], [-122.30315481664655, 37.82555546855131], [-122.30257458761804, 37.82568562422819], [-122.30171993315165, 37.82586652314455], [-122.30073939596791, 37.82609061310662], [-122.29927303101387, 37.826417127345614], [-122.29797644405527, 37.82670583665853], [-122.29601120150484, 37.82712995785679], [-122.29567720249231, 37.82724795764692], [-122.29553220272736, 37.827309956366655], [-122.29516120300661, 37.827505957492825], [-122.2949732377199, 37.82759926458852], [-122.29482095261801, 37.82769682385207], [-122.29468056300709, 37.827806277023974], [-122.29454255482997, 37.827927629727654], [-122.29448162120595, 37.827991375471534], [-122.29438789009089, 37.82808943373165], [-122.29425701992703, 37.82821078596967], [-122.2941237710243, 37.82837972799001], [-122.29396196557703, 37.82863195111785], [-122.29389058274961, 37.828772338493344], [-122.29382763869596, 37.828910609782085], [-122.29379459326992, 37.828983201093905], [-122.29374543566092, 37.82909118718101], [-122.29365025646165, 37.829371964174655], [-122.29364116461265, 37.829409726556776], [-122.29361932207651, 37.82950045425128], [-122.2935645967094, 37.829776470923086], [-122.29353366412091, 37.829907344285374], [-122.29348607676705, 37.830169083218415], [-122.29343134780666, 37.83054265785653], [-122.29342146723685, 37.83059824973327], [-122.29330120258327, 37.83127495784988], [-122.29331220155561, 37.83147295776449], [-122.2933412018679, 37.83174895783391], [-122.29345276184641, 37.83227966497136], [-122.29352414647049, 37.832500954234106], [-122.29361456549707, 37.83274128138627], [-122.29390248003723, 37.83332900720965], [-122.29434659274065, 37.83408399854106], [-122.29482008574377, 37.83487755123896], [-122.29500144212489, 37.83516991101825], [-122.29530539608443, 37.83570121716749], [-122.29555031366179, 37.836114829204256], [-122.29597220474004, 37.83684580822421], [-122.29635920435433, 37.83760795948378], [-122.29642646840615, 37.83786517747801], [-122.29647805685633, 37.83806245522964], [-122.2964842031295, 37.838085959052826], [-122.29651051837743, 37.83820160016592], [-122.29652220456094, 37.838252958715344], [-122.2970452773812, 37.84091734095158], [-122.29707720440473, 37.841079959960894], [-122.29712620480852, 37.841298958385096], [-122.2974113884702, 37.84274168463095], [-122.29774691192377, 37.844322859154296], [-122.29780831267176, 37.84458018354842], [-122.29836602722433, 37.846917513656884], [-122.29844066464803, 37.84716681399743], [-122.29844272538328, 37.847176056181006], [-122.2986662046664, 37.84817895921824], [-122.29887066481832, 37.84899106337764], [-122.29887323220342, 37.849001257263076], [-122.29888020582497, 37.84902895900304], [-122.29938020631548, 37.85129595856699], [-122.29942504212961, 37.85146535700732], [-122.30000290319907, 37.853648551148794], [-122.30099181088465, 37.85734574264865], [-122.30157739836385, 37.85942622479696], [-122.30196656291797, 37.86087154887368], [-122.30248802505895, 37.86269507121813], [-122.30285620766297, 37.86388796141108], [-122.30296067274736, 37.864244222004146], [-122.30334120898318, 37.86554196044409], [-122.30371036266604, 37.866733909586856], [-122.30373049211492, 37.86679890538291], [-122.30373377635561, 37.86680950457625], [-122.3037432077678, 37.866839960405976], [-122.30442213200162, 37.86922531143913], [-122.30462621036956, 37.86983496021636], [-122.30551021818616, 37.872832947726145], [-122.30589620989069, 37.873913960549864], [-122.30616918724428, 37.87478352092124], [-122.30704520903798, 37.87757396053784], [-122.3071096847192, 37.87778344487532], [-122.30722646750276, 37.87816290172395], [-122.30735020953482, 37.87856496122096], [-122.3074882105254, 37.87913796077704], [-122.30788839471315, 37.88107388936939], [-122.30791921052062, 37.881222961049886], [-122.30802596361406, 37.88171097782241]], "type": "LineString"}, "id": "4565", "properties": {"AlignCode": "Right", "County": "ALA", "Direction": "EB", "District": 4, "OBJECTID": 4566, "PMPrefix": null, "PMRouteID": "ALA080...R", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 10743.723983989752, "bOdometer": 6.972, "bPM": 1.643, "bPMc": "1.643", "eOdometer": 12.228, "ePM": 6.899, "ePMc": "6.899"}, "type": "Feature"}, {"bbox": [-122.3496123009842, 37.818859288585486, -122.31983522442391, 37.822776080489255], "geometry": {"coordinates": [[-122.3496123009842, 37.818859288585486], [-122.34235262530439, 37.81989374656677], [-122.33902762177298, 37.82038581684988], [-122.33400416814402, 37.821111896473596], [-122.33188502981238, 37.821424279721626], [-122.32773272731166, 37.82187600271076], [-122.32289311300728, 37.822243337293116], [-122.32110694421883, 37.82255453215379], [-122.32076995740967, 37.82261324160499], [-122.31983522442391, 37.822776080489255]], "type": "LineString"}, "id": "4566", "properties": {"AlignCode": "Right", "County": "ALA", "Direction": "EB", "District": 4, "OBJECTID": 4567, "PMPrefix": "R", "PMRouteID": "ALA080.R.R", "PMSuffix": null, "Route": 80, "RouteS": "80", "RouteType": "Interstate", "RteSuffix": null, "Shape_Leng": 3362.6328694781855, "bOdometer": 5.326, "bPM": 0.0, "bPMc": "R0.0", "eOdometer": 6.972, "ePM": 1.646, "ePMc": "R1.646"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_d0730d174ad94ebbe6895ce937779c96.bindTooltip(
+                `<div>
+                     Official Caltrans I-80
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_d0730d174ad94ebbe6895ce937779c96.addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+            var marker_3dee37aa987fe3722aa89b262801f45f = L.marker(
+                [37.768, -122.3877],
+                {
+}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+            var icon_a8a07128a5f142fdab367392b3b13660 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c62be636a3e6a232b22d3b1d5681a936 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78e903b55bca65ed0344ff58fd94ce56 = $(`<div id="html_78e903b55bca65ed0344ff58fd94ce56" style="width: 100.0%; height: 100.0%;">     <b>Chase Center</b><br>     Home of the Golden State Warriors<br>     2022 NBA Finals Venue     </div>`)[0];
+                popup_c62be636a3e6a232b22d3b1d5681a936.setContent(html_78e903b55bca65ed0344ff58fd94ce56);
+            
+        
+
+        marker_3dee37aa987fe3722aa89b262801f45f.bindPopup(popup_c62be636a3e6a232b22d3b1d5681a936)
+        ;
+
+        
+    
+    
+            marker_3dee37aa987fe3722aa89b262801f45f.bindTooltip(
+                `<div>
+                     Chase Center
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3dee37aa987fe3722aa89b262801f45f.setIcon(icon_a8a07128a5f142fdab367392b3b13660);
+            
+    
+            var circle_marker_615500732b900495d2528eebe0bf17e5 = L.circleMarker(
+                [37.8265686, -122.2984314],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_a68d121962d4c3dcadc9627b05e34922 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3def3d7b8a8c9d71933ddaf0555a6513 = $(`<div id="html_3def3d7b8a8c9d71933ddaf0555a6513" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 08, 2022<br><br>          <b>Timestamp:</b><br>         5:30 PM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         3<br><br>          <b>Collision Type:</b><br>         C<br><br>          <b>Collision Severity:</b><br>         4<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         I-880 N/B TO I-80 W/B         </div>`)[0];
+                popup_a68d121962d4c3dcadc9627b05e34922.setContent(html_3def3d7b8a8c9d71933ddaf0555a6513);
+            
+        
+
+        circle_marker_615500732b900495d2528eebe0bf17e5.bindPopup(popup_a68d121962d4c3dcadc9627b05e34922)
+        ;
+
+        
+    
+    
+            circle_marker_615500732b900495d2528eebe0bf17e5.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_555530052995792173479712a1b12d1c = L.circleMarker(
+                [37.83736038, -122.2965469],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_4a94fef52d359eacd9324c851908019b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7c28f5d2c781a9571dbad88ec8f3a853 = $(`<div id="html_7c28f5d2c781a9571dbad88ec8f3a853" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 08, 2022<br><br>          <b>Timestamp:</b><br>         7:40 AM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         3<br><br>          <b>Collision Type:</b><br>         B<br><br>          <b>Collision Severity:</b><br>         3<br><br>          <b>Primary Road:</b><br>         I-80 W/B<br><br>          <b>Secondary Road:</b><br>         POWELL ST         </div>`)[0];
+                popup_4a94fef52d359eacd9324c851908019b.setContent(html_7c28f5d2c781a9571dbad88ec8f3a853);
+            
+        
+
+        circle_marker_555530052995792173479712a1b12d1c.bindPopup(popup_4a94fef52d359eacd9324c851908019b)
+        ;
+
+        
+    
+    
+            circle_marker_555530052995792173479712a1b12d1c.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0236f371b65cecf289181cb22123c47 = L.circleMarker(
+                [37.88180923, -122.3080063],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_d65dd2f8b77f67313878d9fc5f913965 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_18591b965990ce799c81f40bb7e6af44 = $(`<div id="html_18591b965990ce799c81f40bb7e6af44" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 04, 2022<br><br>          <b>Timestamp:</b><br>         12:35 PM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         3<br><br>          <b>Collision Type:</b><br>         C<br><br>          <b>Collision Severity:</b><br>         4<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         BUCHANAN ST         </div>`)[0];
+                popup_d65dd2f8b77f67313878d9fc5f913965.setContent(html_18591b965990ce799c81f40bb7e6af44);
+            
+        
+
+        circle_marker_d0236f371b65cecf289181cb22123c47.bindPopup(popup_d65dd2f8b77f67313878d9fc5f913965)
+        ;
+
+        
+    
+    
+            circle_marker_d0236f371b65cecf289181cb22123c47.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2bff94fdfc476c83fb2682252387deab = L.circleMarker(
+                [37.86495972, -122.3030701],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_68b0c71d82809d856a71ffb21dcfdf8f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_37df761819a3fca45193580be6d05d2e = $(`<div id="html_37df761819a3fca45193580be6d05d2e" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 10, 2022<br><br>          <b>Timestamp:</b><br>         10:00 AM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         3<br><br>          <b>Collision Type:</b><br>         C<br><br>          <b>Collision Severity:</b><br>         3<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         UNIVERSITY AVE         </div>`)[0];
+                popup_68b0c71d82809d856a71ffb21dcfdf8f.setContent(html_37df761819a3fca45193580be6d05d2e);
+            
+        
+
+        circle_marker_2bff94fdfc476c83fb2682252387deab.bindPopup(popup_68b0c71d82809d856a71ffb21dcfdf8f)
+        ;
+
+        
+    
+    
+            circle_marker_2bff94fdfc476c83fb2682252387deab.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_30e32c2f227b55b794bc7a5384652d52 = L.circleMarker(
+                [37.82786942, -122.2947083],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_dd0b7ad2147faf7060954169202d9725 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0ae87f0f06469e42d06524eedfe031b2 = $(`<div id="html_0ae87f0f06469e42d06524eedfe031b2" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 05, 2022<br><br>          <b>Timestamp:</b><br>         12:20 PM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         3<br><br>          <b>Collision Type:</b><br>         E<br><br>          <b>Collision Severity:</b><br>         3<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         POWELL ST         </div>`)[0];
+                popup_dd0b7ad2147faf7060954169202d9725.setContent(html_0ae87f0f06469e42d06524eedfe031b2);
+            
+        
+
+        circle_marker_30e32c2f227b55b794bc7a5384652d52.bindPopup(popup_dd0b7ad2147faf7060954169202d9725)
+        ;
+
+        
+    
+    
+            circle_marker_30e32c2f227b55b794bc7a5384652d52.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9a2f5631d4c3adc16dcb6d23679bca4a = L.circleMarker(
+                [37.82323074, -122.31987],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_b4dfe930942c04055c146983c15395ba = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3cce5e7b947e7d99e67c7ccfe69c93db = $(`<div id="html_3cce5e7b947e7d99e67c7ccfe69c93db" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 10, 2022<br><br>          <b>Timestamp:</b><br>         10:10 AM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         7<br><br>          <b>Collision Type:</b><br>         B<br><br>          <b>Collision Severity:</b><br>         4<br><br>          <b>Primary Road:</b><br>         I-80 W/B<br><br>          <b>Secondary Road:</b><br>         SFOBB METERING LIGHTS WEST EDGE         </div>`)[0];
+                popup_b4dfe930942c04055c146983c15395ba.setContent(html_3cce5e7b947e7d99e67c7ccfe69c93db);
+            
+        
+
+        circle_marker_9a2f5631d4c3adc16dcb6d23679bca4a.bindPopup(popup_b4dfe930942c04055c146983c15395ba)
+        ;
+
+        
+    
+    
+            circle_marker_9a2f5631d4c3adc16dcb6d23679bca4a.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bb87b67c2244f9d5330309d5dbf8ba5 = L.circleMarker(
+                [37.82196045, -122.3251801],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_1c183fe753e7786fd9cdbecedfafbfa2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_00e77ee5e3f58354df30e04749fbae35 = $(`<div id="html_00e77ee5e3f58354df30e04749fbae35" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 10, 2022<br><br>          <b>Timestamp:</b><br>         7:20 AM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         7<br><br>          <b>Collision Type:</b><br>         C<br><br>          <b>Collision Severity:</b><br>         3<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         BAY BRIDGE SERVICE ROAD         </div>`)[0];
+                popup_1c183fe753e7786fd9cdbecedfafbfa2.setContent(html_00e77ee5e3f58354df30e04749fbae35);
+            
+        
+
+        circle_marker_5bb87b67c2244f9d5330309d5dbf8ba5.bindPopup(popup_1c183fe753e7786fd9cdbecedfafbfa2)
+        ;
+
+        
+    
+    
+            circle_marker_5bb87b67c2244f9d5330309d5dbf8ba5.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2be7e92bf392daac4d4ed5e3163295be = L.circleMarker(
+                [37.82936096, -122.2937317],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_95197477db8399bf848ce1b8094b6a99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_69074e42e1a06259245762139da18c3c = $(`<div id="html_69074e42e1a06259245762139da18c3c" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 12, 2022<br><br>          <b>Timestamp:</b><br>         3:30 AM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         8<br><br>          <b>Collision Type:</b><br>         E<br><br>          <b>Collision Severity:</b><br>         3<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         POWELL ST         </div>`)[0];
+                popup_95197477db8399bf848ce1b8094b6a99.setContent(html_69074e42e1a06259245762139da18c3c);
+            
+        
+
+        circle_marker_2be7e92bf392daac4d4ed5e3163295be.bindPopup(popup_95197477db8399bf848ce1b8094b6a99)
+        ;
+
+        
+    
+    
+            circle_marker_2be7e92bf392daac4d4ed5e3163295be.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb4bf6e411e38170f405abe05b03fbde = L.circleMarker(
+                [37.87879181, -122.3074188],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_4ce6ef8c12a5215bc98a4992d319b49a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c16017545511588b4765ea0740d248eb = $(`<div id="html_c16017545511588b4765ea0740d248eb" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 06, 2022<br><br>          <b>Timestamp:</b><br>         12:53 AM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         8<br><br>          <b>Collision Type:</b><br>         E<br><br>          <b>Collision Severity:</b><br>         3<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         GILMAN ST         </div>`)[0];
+                popup_4ce6ef8c12a5215bc98a4992d319b49a.setContent(html_c16017545511588b4765ea0740d248eb);
+            
+        
+
+        circle_marker_eb4bf6e411e38170f405abe05b03fbde.bindPopup(popup_4ce6ef8c12a5215bc98a4992d319b49a)
+        ;
+
+        
+    
+    
+            circle_marker_eb4bf6e411e38170f405abe05b03fbde.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac67c7fa0ff89dd3eaa5de40f91fefb3 = L.circleMarker(
+                [37.88555145, -122.3087769],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_ae7d6425eff812c5e0fe9daef5f0b56e);
+        
+    
+        var popup_ed1f41ec27a14e28cf8c0ee20fe9b0af = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e2a7cfe847e2496a0a8968c1931a43df = $(`<div id="html_e2a7cfe847e2496a0a8968c1931a43df" style="width: 100.0%; height: 100.0%;">         <h4>TIMS Collision</h4>          <b>Date:</b><br>         June 08, 2022<br><br>          <b>Timestamp:</b><br>         2:15 PM<br><br>          <b>Primary Collision Factor:</b><br>         A<br><br>          <b>Violation Category:</b><br>         7<br><br>          <b>Collision Type:</b><br>         B<br><br>          <b>Collision Severity:</b><br>         4<br><br>          <b>Primary Road:</b><br>         I-80 E/B<br><br>          <b>Secondary Road:</b><br>         BUCHANAN ST         </div>`)[0];
+                popup_ed1f41ec27a14e28cf8c0ee20fe9b0af.setContent(html_e2a7cfe847e2496a0a8968c1931a43df);
+            
+        
+
+        circle_marker_ac67c7fa0ff89dd3eaa5de40f91fefb3.bindPopup(popup_ed1f41ec27a14e28cf8c0ee20fe9b0af)
+        ;
+
+        
+    
+    
+            circle_marker_ac67c7fa0ff89dd3eaa5de40f91fefb3.bindTooltip(
+                `<div>
+                     Click for collision details
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
